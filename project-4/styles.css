@@ -1,8 +1,13 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
 :root {
     --white: hsl(0, 0%, 100%);
     --blue: #6a5acd;
     --pale: hsl(314, 87%, 94%);
     --green: hsl(158, 36%, 37%);
+    --red: hsl(0, 75%, 45%);
+    --yellow: hsl(60, 90%, 60%);
+    --purple: hsl(290, 64%, 60%);
 }
 
 * {
@@ -11,6 +16,15 @@
 
 body {
     background-color: var(--pale);
+    font-family: 'Lato', sans-serif;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.small {
+    font-size: 0.75em;
 }
 
 #header-img {
@@ -54,6 +68,11 @@ body {
     align-items: center;
 }
 
+.brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
 .product {
     font-family: 'Fredoka One', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.25rem;
@@ -78,6 +97,22 @@ input {
 #submit {
     background-color: var(--green);
     color: var(--white);
+    cursor: pointer;
+}
+
+h2 {
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 10px;
+}
+
+.title-theme {
+    font-size: 2rem;
+}
+
+.text-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 section::before {
@@ -92,4 +127,151 @@ section::before {
 section {
     margin: 40px 20px;
     text-align: center;
+}
+
+section h2 {
+    font-size: 1.25rem;
+}
+
+.icon {
+    color: var(--green);
+    margin-right: 30px;
+}
+
+#about > p {
+    margin: 20px 10rem 0;
+}
+
+#features {
+    text-align: left;
+    max-width: 800px;
+    padding: 5px;
+    margin: auto;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-family: 'Montserrat', serif;
+}
+
+#video {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+#pricing {
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.price-tag {
+    font-size: 2rem;
+    padding-top: 5px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 20vw;
+}
+
+.product > .package-name {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+.product > h2 {
+    margin-top: 15px;
+}
+
+.product ol {
+    margin: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.product > ol > li {
+    padding: 5px 0;
+}
+
+.product > button {
+    border: 0;
+    margin: 15px 0;
+    padding: 8px 50px;
+    background-color: #f1c40f;
+    font-weight: 700;
+}
+
+.product > button:hover {
+    background-color: orange;
+    transition: background-color 1s;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
+}
+  
+footer > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+footer > ul > li {
+    padding: 0 10px;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+  
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--blue)
+}
+
+footer a:hover {
+    color: orangered;
+}
+
+@media (max-width: 800px) {
+    #about > p {
+        margin: 20px 2rem 0;
+    }
+
+    #pricing {
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    .product {
+      max-width: 300px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
 }
